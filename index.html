@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Car</title>
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/raleway-5" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+        }
+
+        .swiper {
+            height: 600px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+            }
+        }
+
+        .box {
+            position: fixed;
+            top: 0;
+            transform: rotate(100deg);
+            left: 0;
+        }
+
+        .wave {
+            position: absolute;
+            opacity: .4;
+            width: 1500px;
+            height: 1300px;
+            margin-left: -129px;
+            margin-top: -160px;
+            border-radius: 43%;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            from {
+                transform: rotate(360deg);
+            }
+        }
+
+        .wave.-one {
+            animation: rotate 10000ms infinite linear;
+            opacity: 10%;
+            background: rgb(0, 255, 98);
+        }
+
+        .wave.-two {
+            animation: rotate 6000ms infinite linear;
+            opacity: 15%;
+            background: rgb(0, 255, 255);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container mx-auto px-10 py-5">
+        <nav class="flex items-center">
+            <img class="w-60 cursor-pointer" src="./src/assets/kingdom.png" alt="kingdom logo">
+            <ul class="flex-1 text-center">
+                <li
+                    class="list-none inline-block mx-3 relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center cursor-pointer">
+                    Overview</a>
+                </li>
+                <li
+                    class="list-none inline-block mx-3 relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center cursor-pointer">
+                    <a href="#" class="no-underline text-black px-2">Engine</a>
+                </li>
+                <li
+                    class="list-none inline-block mx-3 relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center cursor-pointer">
+                    <a href="#" class="no-underline text-black px-2">Exterior</a>
+                </li>
+                <li
+                    class="list-none inline-block mx-3 relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center cursor-pointer">
+                    <a href="#" class="no-underline text-black px-2">Interior</a>
+                </li>
+                <li
+                    class="list-none inline-block mx-3 relative text-xl w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center cursor-pointer">
+                    <a href="#" class="no-underline text-black px-2">Equipment</a>
+                </li>
+            </ul>
+            <div class="flex items-center">
+                <i class="fa fa-bell pr-4 cursor-pointer"></i>
+                <img src="./src/assets/person.webp" class="w-10 h-10 rounded-full cursor-pointer" alt="">
+            </div>
+        </nav>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="text-xl ml-20">
+                        <h1 class="mb-2 text-2xl">Mercedes Benz AMG</h1>
+                        <p>Unleash the power of precision with the Mercedes Benz AMG, where performance meets luxury.
+                        </p>
+                        <div class="flex items-center cursor-pointer mt-4">
+                            <i class="fa fa-circle-plus"></i>
+                            <p class="pl-3">More Information</p>
+                        </div>
+                    </div>
+                    <div class="w-10/12 mr-14">
+                        <img src="./src/assets/amg.png" alt="AMG">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-xl ml-20">
+                        <h1 class="mb-2 text-2xl">BMW X6</h1>
+                        <p>Elevate your driving experience with the BMW X6, the ultimate blend of style, power, and
+                            innovation.</p>
+                        <div class="flex items-center cursor-pointer mt-4">
+                            <i class="fa fa-circle-plus"></i>
+                            <p class="pl-3">More Information</p>
+                        </div>
+                    </div>
+                    <div class="w-10/12 mr-14">
+                        <img src="./src/assets/bmw-x6.png" alt="bmw-x6">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-xl ml-20">
+                        <h1 class="mb-2 text-2xl">BMW M2</h1>
+                        <p>Feel the adrenaline with the BMW M2, a compact powerhouse designed for pure driving pleasure.
+                        </p>
+                        <div class="flex items-center cursor-pointer  mt-4">
+                            <i class="fa fa-circle-plus"></i>
+                            <p class="pl-3">More Information</p>
+                        </div>
+                    </div>
+                    <div class="w-10/12 mr-14">
+                        <img src="./src/assets/bmw-m2.png" alt="bmw-m2">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-xl ml-20">
+                        <h1 class="mb-2 text-2xl">Toyota</h1>
+                        <p>Drive the future with Toyota, where advanced technology meets exceptional quality.</p>
+                        <div class="flex items-center cursor-pointer  mt-4">
+                            <i class="fa fa-circle-plus"></i>
+                            <p class="pl-3">More Information</p>
+                        </div>
+                    </div>
+                    <div class="w-10/12 mr-14">
+                        <img src="./src/assets/Tyota.png" alt="Toyota">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="text-xl ml-20">
+                        <h1 class="mb-2 text-2xl">Volkswagen</h1>
+                        <p>Experience the perfect blend of style and performance with Volkswagen, designed for life's
+                            adventures.</p>
+                        <div class="flex items-center cursor-pointer  mt-4">
+                            <i class="fa fa-circle-plus"></i>
+                            <p class="pl-3">More Information</p>
+                        </div>
+                    </div>
+                    <div class="w-10/12 mr-14">
+                        <img src="./src/assets/volkswagen.png" alt="Volkswagen  ">
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class='box'>
+                <div class='wave -one'></div>
+                <div class='wave -two'></div>
+            </div>
+        <footer class="flex justify-end items-end">
+            <div class="mr-24">
+                <img class="w-36" src="./src/assets/car configuration.png" alt="car configuration">
+                <div class="flex justify-center">Best configuration</div>
+            </div>
+            <div class="mr-24">
+                <img class="w-36" src="./src/assets/product.png" alt="car configuration">
+                <div class="flex justify-center">Product guide</div>
+            </div>
+            <div class="mr-24">
+                <img class="w-36" src="./src/assets/detailing.png" alt="car configuration">
+                <div class="flex justify-center">Technical experts</div>
+            </div>
+            <div class="">
+                <img class="w-36" src="./src/assets/free test ride.png" alt="car configuration">
+                <div class="flex justify-center">Test drive</div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            cssMode:true,
+            // effect: "cube",
+            // grabCursor: true,
+            // cubeEffect: {
+            //     shadow: true,
+            //     slideShadows: true,
+            //     shadowOffset: 5,
+            //     shadowScale: 0.94,
+            // },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>
